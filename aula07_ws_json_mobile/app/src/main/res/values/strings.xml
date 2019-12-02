@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Aula07 Rest Json</string>
+    <string name="action_settings">Settings</string>
+    <string name="host_address">http://172.23.224.82</string>
+    <string name="host_port">:9090</string>
+    <string name="endpoint_base">/books</string>
+    <string name="endpoint_listar">/listar</string>
+    <string name="endpoint_salvar">/salvar</string>
+    <string name="endpoint_buscar_por_id">/%d</string>
+    <string name="title_activity_add_livro">AddLivroActivity</string>
+    <string name="title_text_view">Título</string>
+    <string name="writer_text_view">Autor</string>
+    <string name="nPages_text_view">Nº páginas</string>
+    <string name="edition_text_view">Edição</string>
+    <string name="title_hint">Digite o título</string>
+    <string name="writer_hint">Digite o escritor</string>
+    <string name="nPages_hint">Digite o nº de páginas</string>
+    <string name="edition_hint">Digite a edição</string>
+    <string name="add_book_description">Preencha os dados do livro que deseja cadastrar</string>
+    <string name="book_succes_message">Livro cadastrado</string>
+    <string name="title_activity_add_book">AddBookActivity</string>
+</resources>

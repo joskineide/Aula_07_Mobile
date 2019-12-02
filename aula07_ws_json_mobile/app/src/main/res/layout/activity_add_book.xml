@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddBookActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_add_book" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_book_description"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:gravity="center"
+            android:background="@drawable/round_rectangle"
+            />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="4"
+            android:columnCount="2"
+            android:useDefaultMargins="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="2dp"
+            android:paddingStart="5dp"
+            android:elevation="5dp"
+            android:background="@color/colorTrasnparent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="start"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="@string/title_text_view"
+                android:textColor="@color/colorPrimaryDark"
+                android:elevation="2dp"
+                />
+
+            <EditText
+                android:id="@+id/titleEditText"
+                android:layout_width="0dp"
+                android:layout_columnWeight="2"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:hint="@string/title_hint"
+                android:background="@drawable/round_rectangle"
+                android:elevation="2dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="start"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="@string/writer_text_view"
+                android:textColor="@color/colorPrimaryDark"
+                android:elevation="2dp"
+                />
+
+            <EditText
+                android:id="@+id/writerEditText"
+                android:layout_width="0dp"
+                android:layout_columnWeight="2"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:hint="@string/writer_hint"
+                android:background="@drawable/round_rectangle"
+                android:elevation="2dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="start"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="@string/nPages_text_view"
+                android:textColor="@color/colorPrimaryDark"
+                android:elevation="2dp"
+                />
+            <EditText
+                android:id="@+id/nPagesEditText"
+                android:layout_width="0dp"
+                android:layout_columnWeight="2"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:hint="@string/nPages_hint"
+                android:background="@drawable/round_rectangle"
+                android:elevation="2dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="start"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="@string/edition_text_view"
+                android:textColor="@color/colorPrimaryDark"
+                android:elevation="2dp"
+                />
+            <EditText
+                android:id="@+id/editionEditText"
+                android:layout_width="0dp"
+                android:layout_columnWeight="2"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:hint="@string/edition_hint"
+                android:background="@drawable/round_rectangle"
+                android:elevation="2dp"
+                />
+        </GridLayout>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/sendFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:onClick="confirm"
+        android:src="@android:drawable/checkbox_on_background" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_anchor="@+id/appBarLayout"
+        app:layout_anchorGravity="center"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
